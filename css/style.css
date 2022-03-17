@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--sedan-bg: hsl(31, 77%, 52%);
+	--suv-bg: hsl(184, 100%, 22%);
+	--luxury-bg: hsl(179, 100%, 13%);
+
+	--main-color: hsl(0, 0%, 95%);
+	--paragraph-color: hsla(0, 0%, 100%, 0.75);
+
+	--title-font: "Big Shoulders Display", "cursive";
+	--body-font: "Lexend Deca", sans-serif;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--body-font);
+	background-color: var(--main-color);
+	color: var(--main-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+main {
+	margin: 1rem;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+h2 {
+	font-family: var(--title-font);
+}
+
+p {
+	color: var(--paragraph-color);
+}
+
+button {
+	background-color: transparent;
+	border: 2px solid var(--main-color);
+	border-radius: 50px;
+	background-color: var(--main-color);
+	padding: 0.75rem 1.5rem;
+	font-size: inherit;
+}
+
+.card {
+	padding: 3rem 2.5rem;
+	max-width: 20.5rem;
+}
+
+.card-icon {
+	margin-bottom: 1.5rem;
+}
+
+.card-title {
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+
+.card-text {
+	margin: 2rem 0;
+	line-height: 1.5;
+}
+
+.sedan {
+	background-color: var(--sedan-bg);
+}
+
+.suv {
+	background-color: var(--suv-bg);
+}
+
+.luxury {
+	background-color: var(--luxury-bg);
+}
+
+.sedan button {
+	color: var(--sedan-bg);
+}
+
+.suv button {
+	color: var(--suv-bg);
+}
+
+.luxury button {
+	color: var(--luxury-bg);
+}
+
+@media (min-width: 760px) {
+	main {
+		display: flex;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		max-width: 18.75rem;
+	}
+
+	.card-text {
+		font-size: 0.95rem;
+		margin-bottom: 4.5rem;
+	}
+
+	button {
+		margin-top: auto;
+		align-self: flex-start;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: inherit;
+		color: var(--main-color);
+	}
+}
